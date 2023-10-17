@@ -2,11 +2,14 @@ import BackToHomeLink from "@/components/BackToHome"
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
+console.log('FIRST article')
+
 export default function Article(props) {
     const router = useRouter()
 
-    console.log("props", props);
-    console.log("router", router);
+
+    // console.log("props", props);
+    // console.log("router", router);
 
     return (
         <>
