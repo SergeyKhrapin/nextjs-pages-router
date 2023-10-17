@@ -8,18 +8,21 @@ import Article from "./articles/[id]";
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const openPrintPage = () => {
-    window.open('posts/first-post');
-
+  const setStorage = () => {
     document.cookie = "cookieValue=111";
     localStorage.setItem('localStorageValue', '222');
     sessionStorage.setItem('sessionStorageValue', '333');
+  }
+
+  const openPrintPage = () => {
+    window.open('posts/first-post');
   }
 
   return (
     <main
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
     >
+      <button onClick={setStorage}>Set storage</button>
       <button onClick={openPrintPage}>Open print page</button>
       <br />
 
